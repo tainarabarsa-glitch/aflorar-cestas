@@ -1,0 +1,114 @@
+/* ===== Quick wins — Diagnóstico Agosto/2026 ===== */
+
+/* Linha de prova social abaixo do CTA do hero */
+.trust-line {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #8a7a6c;
+  letter-spacing: 0.2px;
+}
+.trust-line .stars { color: #e8b34a; margin-right: 4px; }
+
+/* Navegação por categoria */
+.navbar3_link.category-link {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Cabeçalhos de categoria dentro do catálogo */
+.category-heading {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 48px 0 20px;
+  color: #3a2e28;
+  text-align: left;
+  grid-column: 1 / -1;
+}
+.category-heading:first-child { margin-top: 0; }
+
+/* Selo "mais pedida" */
+.badge-mais-pedida {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #e8b34a;
+  color: #3a2e28;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  z-index: 5;
+}
+.inicio_de-lista-de-produtos-de-ecommerce_item { position: relative; }
+
+/* Preço no card */
+.price-tag {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3a2e28;
+  margin: 6px 0 14px;
+}
+.price-tag .price-from {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9c8b7c;
+  display: block;
+}
+
+/* Depoimentos reais */
+.testimonial-card {
+  background: #faf6f1;
+  border-radius: 14px;
+  padding: 20px;
+  text-align: left;
+}
+.testimonial-card .stars {
+  color: #e8b34a;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: block;
+}
+.testimonial-card p {
+  font-size: 14px;
+  color: #5a4636;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.testimonial-card .author {
+  font-size: 12px;
+  color: #9c8b7c;
+  font-weight: 600;
+}
+
+/* Rodapé completo */
+.footer3_top-wrapper.footer-expanded {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 16px;
+  color: #3a2e28;
+}
+.footer-col a, .footer-col p {
+  display: block;
+  font-size: 13px;
+  color: #6b5c4f;
+  text-decoration: none;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.footer-col a:hover { color: #3a2e28; }
+
+@media (max-width: 767px) {
+  .footer3_top-wrapper.footer-expanded {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
