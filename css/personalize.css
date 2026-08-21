@@ -1,0 +1,178 @@
+/* ===== Jornada de personalização ===== */
+
+.wizard-progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 4px;
+}
+.wizard-progress-step {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #b4a897;
+  position: relative;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #e8d9c5;
+}
+.wizard-progress-step span {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 4px;
+  color: #9c8b7c;
+}
+.wizard-progress-step.is-active {
+  color: #3a2e28;
+  border-bottom-color: #e8b34a;
+}
+.wizard-progress-step.is-active span { color: #6b5c4f; }
+.wizard-progress-step.is-done {
+  border-bottom-color: #3a2e28;
+}
+
+.wizard-step { display: none; }
+.wizard-step.is-active { display: block; animation: wizard-fade 0.25s ease; }
+@keyframes wizard-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wizard-step-title {
+  font-family: 'Afacad', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #3a2e28;
+  margin-bottom: 8px;
+}
+.wizard-step-subtitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+  color: #6b5c4f;
+  margin-bottom: 24px;
+}
+
+.wizard-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.wizard-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #faf6f1;
+  border: 1.5px solid #e8d9c5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: #3a2e28;
+}
+.wizard-option:hover { border-color: #3a2e28; }
+.wizard-option input[type="radio"] { accent-color: #3a2e28; width: 18px; height: 18px; flex-shrink: 0; }
+.wizard-option input[type="radio"]:checked ~ span { font-weight: 700; }
+.wizard-option:has(input:checked) {
+  border-color: #3a2e28;
+  background: #fff;
+}
+.wizard-option em {
+  display: block;
+  font-style: normal;
+  font-size: 12px;
+  color: #9c8b7c;
+  margin-top: 2px;
+}
+
+.wizard-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3a2e28;
+  margin: 20px 0 8px;
+}
+.wizard-input {
+  width: 100%;
+  border: 1.5px solid #e8d9c5;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: #3a2e28;
+  background: #fff;
+}
+.wizard-input:focus { outline: none; border-color: #3a2e28; }
+.wizard-textarea { min-height: 110px; resize: vertical; }
+
+.wizard-conditional { display: none; }
+.wizard-conditional.is-visible { display: block; }
+
+.wizard-error {
+  display: none;
+  color: #a34444;
+  font-size: 13px;
+  margin-top: 14px;
+}
+.wizard-error.is-visible { display: block; }
+
+.wizard-summary {
+  margin-top: 32px;
+  background: #faf6f1;
+  border-radius: 12px;
+  padding: 20px;
+}
+.wizard-summary h3 {
+  font-family: 'Afacad', sans-serif;
+  font-size: 18px;
+  color: #3a2e28;
+  margin-bottom: 12px;
+}
+.wizard-summary ul { list-style: none; padding: 0; margin: 0; }
+.wizard-summary li {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  color: #5a4636;
+  padding: 6px 0;
+  border-bottom: 1px solid #e8d9c5;
+}
+.wizard-summary li:last-child { border-bottom: none; }
+.wizard-summary li strong { color: #3a2e28; }
+
+.wizard-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 32px;
+}
+.wizard-btn {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 13px 26px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+.wizard-btn-primary {
+  background: #3a2e28;
+  color: #fff;
+  margin-left: auto;
+}
+.wizard-btn-primary:hover { background: #2a2019; color: #fff; }
+.wizard-btn-secondary {
+  background: transparent;
+  color: #3a2e28;
+  border: 1.5px solid #e8d9c5;
+}
+.wizard-btn-secondary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+@media (max-width: 767px) {
+  .wizard-progress-step span { display: none; }
+  .wizard-options { grid-template-columns: 1fr; }
+}
