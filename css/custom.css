@@ -22,6 +22,19 @@
 }
 .trust-line .stars { color: #e8b34a; margin-right: 4px; }
 
+/* Proteção contra overflow horizontal no mobile (evita conteúdo "vazando" e empurrando a tela) */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Corrige o ícone do menu mobile (cor quebrada no CSS original do Webflow) */
+.menu-icon3_line-top,
+.menu-icon3_line-middle,
+.menu-icon3_line-bottom {
+  background-color: #3a2e28 !important;
+}
+
 /* Teaser Aflorar Corporativo */
 .corporate-teaser {
   display: flex;
