@@ -35,6 +35,20 @@ html, body {
   background-color: #3a2e28 !important;
 }
 
+/* Corrige o fundo do menu mobile expandido (transparência quebrada no CSS original) */
+@media (max-width: 767px) {
+  .navbar3_menu {
+    background-color: #faf6f1 !important;
+  }
+  .navbar3_link {
+    color: #3a2e28 !important;
+  }
+  /* Remove o logo duplicado dentro do menu (o logo da barra superior já fica visível) */
+  .navbar3_logo-link-menu {
+    display: none !important;
+  }
+}
+
 /* Teaser Aflorar Corporativo */
 .corporate-teaser {
   display: flex;
@@ -252,3 +266,5 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.trust-line .trust-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }

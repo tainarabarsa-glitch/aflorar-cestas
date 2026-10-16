@@ -3,7 +3,12 @@
   document.addEventListener('DOMContentLoaded', function () {
     var pills = document.querySelectorAll('.occasion-pill');
     var headings = document.querySelectorAll('.category-heading');
-    var emptyMessage = document.querySelector('.occasion-empty-message');
+    var emptyMessage = document.createElement('p');
+    emptyMessage.className = 'occasion-empty-message';
+    emptyMessage.style.display = 'none';
+    emptyMessage.innerHTML = 'Nenhuma cesta encontrada para essa ocasião — <a href="personalize/">personalize a sua</a>.';
+    var filterBox = document.querySelector('.occasion-filter');
+    if (filterBox) filterBox.insertAdjacentElement('afterend', emptyMessage);
 
     if (!pills.length || !headings.length) return;
 
